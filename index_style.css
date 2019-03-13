@@ -1,0 +1,20 @@
+body{
+    background-color: #a6a6a6;
+}
+
+.inputField{
+height:2em;
+width: 50%;
+align-content: center;
+text-align: center;
+
+}
+
+.inputField:focus{
+    border-color:black;
+}
+.myBtn{
+    width:45%;
+    height: 5em;
+}
+

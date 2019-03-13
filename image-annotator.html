@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
@@ -7,23 +7,34 @@
   <link rel="stylesheet" href="/parts/kan01.css" />
   <link rel="stylesheet" href="/lib/js/annot/annotorious.css" />
   <link rel="stylesheet" href="/lib/js/my/imgannot.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="index_style.css" />
   <script src="/parts/std.js"></script>
   <script src="/lib/js/osd/openseadragon.min.js"></script>
   <script src="/lib/js/annot/annotorious.min.js"></script>
   <script src="/lib/js/my/webannotorious.js"></script>
   <script src="/lib/js/my/annotext.js"></script>
   <script src="/lib/js/my/imgannot.js"></script>
+  <script src="/lib/js/osd/openseadragon-svg-overlay.js"></script>
 </head>
 
 <body>
   <div class="main" role="main" id="main">
-  <h1 id="annotitle">Image Annotator</h1>
-
+  <h1 class="w3-center" id="annotitle">Image Annotator</h1>
   <div id="openseadragon"></div>
-  <script>Mia.setup("http://www2.dhii.jp/nijl/NIJL0010/099-0127/manifest.json", "", "./works/2016/annot/mushierami.json");</script>
+  <script>Mia.setup("https://digi.ub.uni-heidelberg.de/diglit/iiif/cpg330/manifest.json", "", "./works/2018/test/uni-heidelberg-cpg330-0026-annot.json");</script>
+ 
+  <div class="w3-container w3-padding w3-blue w3-mobile" >  
+    <form class="w3-container w3-center"action="http://www.kanzaki.com/works/2016/pub/image-annotator?u=" method="get">
+      
+       <label class="w3-medium" for="paramu">IMG URL: </label> <br>
+        <input class="inputField w3-round-xlarge w3-margin-bottom" autocomplete=off id="paramu" name="u" type="text" required > <br>
+        <input class="w3-button w3-black w3-round-xxlarge myBtn w3-hover-grey"type="submit"value="SEND" >
+    </form>
+   
   </div>
-
-  <footer style="margin-top: 3ex;">
+</div>
+  <footer class="w3-black w3-padding w3-bottom w3-center w3-text-blue w3-mobile" style="margin-top: 3ex;">
     <span>This software Image Annotator (see <a href="https://github.com/dfukagaw28/mk-image-annotator">repository</a> for details), as well as <a href="http://www.kanzaki.com/works/2016/pub/image-annotator">its original version</a> (created by <a href="http://www.kanzaki.com/info/who">Masahide Kanzaki</a>), is released under <a href="https://opensource.org/licenses/MIT">the MIT license</a>.</span><br>
     <span>Media and annotations follow source license. Image handling by <a href="https://openseadragon.github.io/">OpenSeadragon</a> and annotation by <a href="http://annotorious.github.io/">Annotorious</a>.</span>
   </footer>
